@@ -1108,6 +1108,7 @@ header .top-bar {
 	min-height: 66px;
 	position: absolute;
 	top: 0;
+	left: 10px;
 }
 header .logo {
 	float: left;
@@ -1266,31 +1267,6 @@ header .logo a {
 	color: #FF0077;
 }
 
-/**
- * responsive:
- * header styles
- * --------------------------------------------------------------- 
- */
-@media only screen and (max-width:1024px) {
-	header .top-bar {
-		left: 60px;
-	}
-}
-@media only screen and (max-width:768px) {
-	header .top-bar {
-		left: 50px;
-	}
-}
-@media only screen and (max-width:600px) {
-	header .top-bar {
-		left: 35px;
-	}
-}
-@media only screen and (max-width:400px) {
-	header .top-bar {
-		left: 25px;
-	}
-}
 
 
 /** 
@@ -2033,15 +2009,13 @@ header .logo a {
 	padding-top: 5rem;
 	padding-bottom: 9rem;
 	text-align: center;
+	background: #FFFFFF;
 }
 #technical-skills p.lead {
 	color: #6e6e6e;
 }
 #technical-skills div {
 	padding: 5px 0px;
-}
-#technical-skills h1, #technical-skills h3 {
-	color: #fff;
 }
 
 /**
@@ -2148,6 +2122,7 @@ header .logo a {
 }
 .services-list .desc {
 	color: rgba(255, 255, 255, 0.6);
+	text-align: justify;
 }
 
 /* pagination */
