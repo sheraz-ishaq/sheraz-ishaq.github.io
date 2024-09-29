@@ -281,9 +281,6 @@ ul {
 li {
 	display: list-item;
 }
-ol, ul {
-	margin-left: 1.7rem;
-}
 ul li {
 	padding-left: .4rem;
 }
@@ -1503,7 +1500,7 @@ header .logo a {
 	float: left;
 }
 .intro-info .lead {
-	text-align: left;
+	text-align: justify;
 	padding-left: 13rem;
 }
 
@@ -1599,7 +1596,7 @@ header .logo a {
 	}
 	.intro-info .lead {
 		padding-left: 0;
-		text-align: center;
+		text-align: justify;
 	}
 }
 
@@ -1653,15 +1650,14 @@ header .logo a {
 }
 
 #resume .tags li {
-	display: inline;
+	display: inline-block;
 	list-style: none;
-	margin-left: 0px;
 	border-radius: 10px;
-	border: 1px solid #5F6F52;
+	border: 1px solid #8B3B3B;
 	padding: 5px;
-	margin: 0px 5px;
+	margin: 5px;
 	font-size: 12px;
-	background-color: #5F6F52;
+	background-color: #8B3B3B;
 	color: white;
 }
 
@@ -1681,6 +1677,9 @@ header .logo a {
 }
 #resume .timeline-content {
 	padding-left: 60px;
+}
+#resume .timeline-content p {
+	text-align: justify;
 }
 #resume .timeline-content h2 {
 	position: relative;
