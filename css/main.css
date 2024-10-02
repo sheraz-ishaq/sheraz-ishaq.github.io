@@ -149,6 +149,9 @@ h6, .h06 {
 	text-transform: uppercase;
 	letter-spacing: .15rem;
 }
+p {
+	font-family: "lora-italic" !important;
+}
 p img {
 	margin: 0;
 }
