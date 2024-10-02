@@ -352,6 +352,7 @@ th:last-child, td:last-child {
  */
 button, .button {
 	margin-bottom: 1.2;
+	border-radius: 5px;
 }
 fieldset {
 	margin-bottom: 1.5rem;
@@ -2184,6 +2185,7 @@ header .logo a {
 }
 #stats .icon-part i {
 	font-size: 4.8rem;
+	color: #E4C59E;
 }
 #stats .stat-count {
 	color: #FFFFFF;
@@ -2193,8 +2195,9 @@ header .logo a {
 	font-family: "poppins-medium", sans-serif;
 	color: white;
 }
-#stats .stat-title, #stats .icon-part {
-	color: #E4C59E;
+#stats .stat-title {
+	color: #FFFFFF;
+	font-size: 1.5rem;
 }
 
 /**
