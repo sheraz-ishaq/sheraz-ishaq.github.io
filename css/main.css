@@ -101,7 +101,7 @@ a:hover, a:focus, a:active {
  * ------------------------------------------------------------------- 
  */
 h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
-	font-family: "poppins-semibold", sans-serif;
+	font-family: "lora-italic", sans-serif;
 	color: #313131;
 	font-style: normal;
 	text-rendering: optimizeLegibility;
@@ -111,7 +111,6 @@ h3, .h03, h4, .h04 {
 	margin-bottom: 1.8rem;
 }
 h5, .h05, h6, .h06 {
-	font-family: "poppins-bold";
 	margin-bottom: 1.2rem;
 }
 h1, .h01 {
@@ -156,7 +155,6 @@ p img {
 	margin: 0;
 }
 p.lead {
-	font-family: "lora-regular", serif;
 	font-size: 2rem;
 	line-height: 1.8;
 	color: #888888;
@@ -653,7 +651,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
 	display: inline-block;
-	font-family: "poppins-bold", sans-serif;
+	font-family: "lora-italic", sans-serif;
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
@@ -1054,7 +1052,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	position: relative;
 }
 .section-intro h1 {
-	font-family: "poppins-semibold", serif;
 	font-size: 3.6rem;
 	color: #313131;
 	line-height: 1.25;
@@ -1319,7 +1316,6 @@ header .logo a {
 }
 .intro-content h1 {
 	color: #FFFFFF;
-	font-family: "poppins-medium", sans-serif;
 	font-size: 8.4rem;
 	line-height: 1.071;
 	max-width: 900px;
@@ -2195,7 +2191,6 @@ header .logo a {
 	font-size: 3.6rem;
 	margin-top: 1.2rem;
 	margin-bottom: 0;
-	font-family: "poppins-medium", sans-serif;
 	color: white;
 }
 #stats .stat-title {
