@@ -2021,16 +2021,15 @@ header .logo a {
 	padding-top: 5rem;
 	padding-bottom: 9rem;
 	text-align: center;
-	background: #FAEED1;
+	background: #FFFFFF;
 }
-#technical-skills p.lead {
-	color: #6e6e6e;
-}
+
 #technical-skills div {
 	padding: 5px 0px;
 }
+
 #technical-skills h3 {
-	color: #BF3131;
+	color: #BF3131 !important;
 }
 
 /**
@@ -2173,7 +2172,7 @@ header .logo a {
 	background: #7D0A0A;
 	padding: 2rem;
 	text-align: center;
-	border-radius: 5rem;
+	border-radius: 5px;
 }
 #stats .stat {
 	border-left: 1px solid rgba(255, 255, 255, 0.12);
