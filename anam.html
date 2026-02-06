@@ -1,54 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Runaway Button</title>
-
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Will You Be My Valentine?</title>
 
 <style>
-  body {
-    height: 100vh;
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-  }
+	* {
+		box-sizing: border-box;
+		font-family: "Poppins", system-ui, -apple-system, sans-serif;
+	}
 
-  #runaway {
-    position: fixed;
-    padding: 15px 25px;
-    font-size: 18px;
-    cursor: pointer;
-  }
+	body {
+		margin: 0;
+		height: 100vh;
+		background: linear-gradient(135deg, #ff758c, #ff7eb3);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+	}
+
+	.card {
+		background: white;
+		padding: 30px 20px;
+		border-radius: 20px;
+		text-align: center;
+		max-width: 350px;
+		width: 90%;
+		box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+		position: relative;
+	}
+
+	h1 {
+		color: #ff4d6d;
+		font-size: 1.8rem;
+		margin-bottom: 10px;
+	}
+
+	p {
+		color: #555;
+		font-size: 1rem;
+		margin-bottom: 25px;
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: center;
+		gap: 15px;
+		position: relative;
+	}
+
+	button {
+		border: none;
+		padding: 14px 26px;
+		border-radius: 30px;
+		font-size: 1rem;
+		cursor: pointer;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	#yesBtn {
+		background: #ff4d6d;
+		color: white;
+		box-shadow: 0 10px 20px rgba(255,77,109,0.4);
+	}
+
+	#yesBtn:hover {
+		transform: scale(1.08);
+	}
+
+	#noBtn {
+		background: #f1f1f1;
+		color: #444;
+		position: absolute;
+	}
+
+	.heart {
+		position: absolute;
+		color: #ff4d6d;
+		font-size: 20px;
+		animation: floatUp 4s linear infinite;
+		opacity: 0.7;
+	}
+
+	@keyframes floatUp {
+		0% {
+			transform: translateY(0) scale(1);
+			opacity: 0.8;
+		}
+		100% {
+			transform: translateY(-100vh) scale(1.5);
+			opacity: 0;
+		}
+	}
+
+	.success {
+		font-size: 1.4rem;
+		color: #ff4d6d;
+		font-weight: bold;
+	}
 </style>
 </head>
 <body>
 
-<button id="runaway">Catch Me 😜</button>
+<div class="card" id="card">
+	<h1>💖 Hey My Love 💖</h1>
+	<p>Every moment with you feels magical.<br>Will you be my Valentine?</p>
+
+	<div class="buttons">
+		<button id="yesBtn">Yes 💕</button>
+		<button id="noBtn">No 🙈</button>
+	</div>
+</div>
 
 <script>
-$(function () {
-  $("#runaway").on("touchstart mouseenter", function (e) {
-    e.preventDefault();
+	const noBtn = document.getElementById("noBtn");
+	const yesBtn = document.getElementById("yesBtn");
+	const card = document.getElementById("card");
 
-    const btn = $(this);
-    const btnWidth = btn.outerWidth();
-    const btnHeight = btn.outerHeight();
+	function moveNoButton() {
+		const cardRect = card.getBoundingClientRect();
+		const btnRect = noBtn.getBoundingClientRect();
 
-    const maxX = $(window).width() - btnWidth;
-    const maxY = $(window).height() - btnHeight;
+		const maxX = cardRect.width - btnRect.width - 10;
+		const maxY = cardRect.height - btnRect.height - 10;
 
-    const randomX = Math.random() * maxX;
-    const randomY = Math.random() * maxY;
+		const x = Math.random() * maxX;
+		const y = Math.random() * maxY;
 
-    btn.css({
-      left: randomX + "px",
-      top: randomY + "px"
-    });
-  });
-});
+		noBtn.style.left = `${x}px`;
+		noBtn.style.top = `${y}px`;
+	}
+
+	// Mobile + desktop friendly
+	noBtn.addEventListener("mouseenter", moveNoButton);
+	noBtn.addEventListener("touchstart", moveNoButton);
+
+	yesBtn.addEventListener("click", () => {
+		card.innerHTML = `
+			<h1 class="success">Yaaay! 💘</h1>
+			<p>You just made me the happiest person alive! 🥰</p>
+			<p>Happy Valentine’s Day ❤️</p>
+		`;
+		createHearts();
+	});
+
+	function createHearts() {
+		for (let i = 0; i < 30; i++) {
+			const heart = document.createElement("div");
+			heart.classList.add("heart");
+			heart.innerHTML = "❤️";
+			heart.style.left = Math.random() * 100 + "vw";
+			heart.style.bottom = "-20px";
+			heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+			document.body.appendChild(heart);
+
+			setTimeout(() => heart.remove(), 5000);
+		}
+	}
 </script>
 
 </body>
