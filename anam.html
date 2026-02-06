@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Runaway Button</title>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+  body {
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+
+  #runaway {
+    position: fixed;
+    padding: 15px 25px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<button id="runaway">Catch Me 😜</button>
+
+<script>
+$(function () {
+  $("#runaway").on("touchstart mouseenter", function (e) {
+    e.preventDefault();
+
+    const btn = $(this);
+    const btnWidth = btn.outerWidth();
+    const btnHeight = btn.outerHeight();
+
+    const maxX = $(window).width() - btnWidth;
+    const maxY = $(window).height() - btnHeight;
+
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+
+    btn.css({
+      left: randomX + "px",
+      top: randomY + "px"
+    });
+  });
+});
+</script>
+
+</body>
+</html>
