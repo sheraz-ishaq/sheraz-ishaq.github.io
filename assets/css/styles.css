@@ -137,7 +137,16 @@ a.dotted-link:hover {
 	font-weight: 400;
 	font-size: 24px;
 	margin-top: 0;
+}
+
+.header .profile-content .desc2 {
 	margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+	.desc2 {
+		margin-left: 130px;
+	}
 }
 
 .header .profile-content .social a {
