@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 	new countUp.CountUp('years-counter', 10, {
-		duration: 2,
+		duration: 4,
 		autoAnimate: true
 	}).start();
 
 	new countUp.CountUp('projects-counter', 75, {
-		duration: 2,
+		duration: 4,
 		autoAnimate: true
 	}).start();
 
 	new countUp.CountUp('clients-counter', 30, {
-		duration: 2,
+		duration: 4,
 		autoAnimate: true
 	}).start();
 
 	new countUp.CountUp('rating-counter', 4.9, {
-		duration: 2,
+		duration: 4,
 		decimalPlaces: 1,
 		autoAnimate: true
 	}).start();
